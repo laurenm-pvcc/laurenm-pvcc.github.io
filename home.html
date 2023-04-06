@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lauren M.'s Civic Engagement Project Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+		.navbar {
+			background-color: #333;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1; /* do not forget me */
+		}
+		.navbar a {
+			float: left;
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 17px;
+		}
+		.navbar a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		.parallax {
+			background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ca/SCOTUS_Marshall_Maryland_by_Swatester.jpg');
+			height: 500px;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			z-index: -1; /* do not forget me */
+		}
+		.parallax-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 60px;
+			text-align: center;
+		}
+		.content {
+			padding: 50px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<a href="home.html">Home</a>
+		<a href="sources.html">Sources</a>
+		<a href="quiz.html">Quiz</a>
+	</div>
+	<div class="parallax" id="home">
+		<div class="parallax-text">Supreme Court of the United States: McCulloch v. Maryland (1819)</div>
+	</div>
+	<div class="content">
+		<h1>SCOTUS: McCulloch v. Maryland (1819)</h1>
+        <p>McCulloch v. Maryland was a case that centered on two main issues: whether Congress possessed the authority to establish a national bank and whether Maryland had overstepped its bounds by imposing taxes on the bank, thereby interfering with Congress's powers.</p>
+		<p>On March 6, 1819, the U.S. Supreme Court determined that Congress possessed the power to establish a federal bank and that states were not permitted to levy taxes on this financial institution. This ruling held greater significance as it affirmed that the Constitution granted Congress authority beyond what was explicitly stated in the document.</p>
+        <p>McCulloch v. Maryland paved the way for the significant expansion of the federal government in the following two centuries, allowing it to take on roles and responsibilities that the country's founders could not have predicted. Had this landmark decision not been made, Congress would not have had the authority to establish programs such as the New Deal and Social Security during the 1930s or pass important legislation like the Civil Rights Act of 1964 and the Patient Protection and Affordable Care Act in 2010.</p>
+	</div>
+	<div class="parallax" id="quiz">
+        <div class="parallax-text"></div>
+    </div>
+    <div class="content">
+    
+</body>
+</html>
