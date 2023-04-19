@@ -47,10 +47,23 @@ def calculate_grades():
         sum_grades = stu[i]['hw'] + stu[i]['mid_exam'] + stu[i]['fin_exam']
         stu[i]['fin_grade'] = sum_grades / 3
 
+        finalgr = stu[i]['fin_grade']
+        if finalgr >= 90:
+            lettergrade = 'A'
+        elif finalgr >= 80:
+            lettergrade = 'B'
+        elif finalgr >= 70:
+            lettergrade = 'C'
+        elif finalgr >= 60:
+            lettergrade = 'D'
+        else:
+            lettergrade = 'F'
+        stu[i]['ltr_grade'] = lettergrade
+
 
 def print_grade_report():
     print("******************* CSC 230 Grade Report ********************")
-    print("NAME                                    HW\t MID\t FIN\tFINAL GRADE")
+    print("NAME                    HW\tMID\tFIN\t FINAL GRADE")
     for i in range(len(stu)):
         sname = '{:<18}'.format(stu[i]['name'])
         hw = str(stu[i]['hw'])
