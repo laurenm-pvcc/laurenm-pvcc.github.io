@@ -9,6 +9,7 @@
 #     ---plus 4 technical electives
 
 # create sets for  CERTIIFICATE, Computer & Network Support Technologies
+
 network_req = {'CSC 110', 'ETR 164', 'ITN 101',}
   
 network_elect = {'CSC 201', 'CSC 202', 'CSC 205', 
@@ -27,38 +28,46 @@ info_elect ={'ITN 170', 'ITN 208', 'ITN 260', 'ITN 261',
 
 dash_line = "------------------------------------------------------"
 
+
 def main():
-    filename = input("Enter filename: ")
-    if not filename.endswith(".txt"):
-        filename += ".txt"
-    try:
-        with open(filename, "r") as f:
-            courses = json.load(f)
-    except FileNotFoundError:
-        print("File not found")
-        courses()
-
-    with open(filename, "w") as f:
-        content = f.read()
-        if not content:
+    while True:
+        file_name = input("Enter the name of the file you want to open: ")
+        try:
+            with open(file_name) as file:
+                # Do something with the file
+                print(f"The contents of {file_name} are:")
+                print(file.read())
+        except FileNotFoundError:
+            print(f"Error: {file_name} not found")
+            user_input = input("Do you want to look for a different file? (y/n): ")
+            if user_input.lower() == "n":
+                print("Thank you for using this program!")
+                break
+            continue
+            
+        if not file_name.endswith(".txt"):
+            file_name += ".txt"
+        
+        try:
+            with open(file_name, "r") as f:
+                courses = [line.strip().split(",") for line in f.readlines()]
+                course_list(courses)
+        except FileNotFoundError:
+            print("File not found")
+            
+        with open("pvcc_courses.txt", "w") as f:
             f.write("CourseID,CourseName,InstructorName\n")
-        display_network_courses(f)
-        with open(filename, "r") as f:
+            process_network_courses()
+            display_network_courses(f)
+            f.write("********************Piedmont Virginia Community College********************\n")
+            courses = load_courses(f)
+            display_info_courses(courses)
+            process_info_courses()
             display_info_courses(f)
-        f.write("********************Piedmont Virginia Community College********************")
-        process_network_courses()
-        display_network_courses(f)
-        f.seek(0)  # reset the file pointer
-        courses = load_courses(f)
-        display_info_courses(courses)
-
-        process_info_courses()
-        display_info_courses(f)
-
-        process_courses_in_both()
-        display_courses_in_both(f)
-
-    print("The course data has been written to the file 'pvcc_courses.txt'.")
+            process_courses_in_both()
+            display_courses_in_both(f)
+            print("The course data has been written to the file 'pvcc_courses.txt'.")
+            break
 
 
 def process_network_courses():
@@ -103,8 +112,17 @@ def display_network_courses(file):
 
 
 def process_info_courses():
+    filename = input("Enter filename: ")
+    try:
+        with open(filename, "r") as f:
+            courses = json.load(f)
+            total_credit_hours = sum(course["Credit Hours"] for course in courses)
+            print("Total number of courses      : ", len(courses))
+            print("Total number of credit hours : ", total_credit_hours)
+    except FileNotFoundError:
+        print("File not found")
     #student: add code for processing info course here
-    print("here")
+    
 
 def display_info_courses(f):
     f.write("\n\nCourse Information:\n\n")
@@ -119,7 +137,7 @@ def display_info_courses(f):
 def process_courses_in_both():
     both_req = network_req.intersection(info_reg)
     print(dash_line)
-    print("REQUIRED courses in both programs:")
+    print("REQUIRED courses in both programs: ")
     num = 1
     for course in both_req:  #Display 5 courses per line
         print(course, end = " ")
@@ -127,5 +145,16 @@ def process_courses_in_both():
         if num % 5 == 0:
             print()
     #student: add code for elective in both courses here
+
+def course_list():
+    # Read the dictionaries of courses from the file
+    filename = input("Enter filename: ")
+    with open(filename, "r") as f:
+        courses = f.readlines()
+
+    # Print out the list of courses
+    f.write("List of courses: ")
+    for course in courses:
+        print(course.strip())
 
 main()
