@@ -1,0 +1,22 @@
+CSC 201,Introduction to Python
+CSC 202,Object-Oriented Programming with Java
+CSC 205,Assembly Language and Computer Architecture
+ETR 113,DC/AC Electricity
+ETR 149,Analog and Digital Electronics
+ETR 203,Introduction to Routing and Switching
+ETR 290,Cisco Network Academy Capstone
+ITN 106,Microcomputer Operating Systems
+ITN 120,Network Communication, Security and Authentication
+ITN 151,Networking Fundamentals, Routing and Switching
+ITN 170,Linux Installation and Configuration
+ITN 260,Internetworking Troubleshooting
+ITN 290,Advanced Networking
+ITP 120,Java Programming I
+ITP 132,Visual BASIC Programming I
+ITP 200,Java Programming II
+ITP 220,Advanced Java Programming
+ITP 290,Selected Topics in Programming
+MTH 131,Fundamentals of Mathematics I
+MTH 161,PreCalculus I
+MTH 162,PreCalculus II
+MTH 263,Statistics and Probability
