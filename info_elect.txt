@@ -1,0 +1,11 @@
+Course Code,Course Name,Course Description
+ITN 170,UNIX and Network Security,This course covers the installation and configuration of the Linux operating system, as well as fundamental network security concepts.
+ITN 208,Protocols and Packet Analysis,This course covers the fundamental concepts of network protocols, including IP, TCP, UDP, and DNS, as well as tools for packet analysis and troubleshooting.
+ITN 260,Network Security Basics,This course covers the fundamentals of network security, including firewalls, intrusion detection and prevention, and VPNs.
+ITN 261,Network Attacks, Countermeasures and Techniques,This course covers various network attacks, including reconnaissance, denial-of-service, and distributed attacks, as well as techniques for detecting and preventing them.
+ITN 276,Network Engineering Fundamentals,This course covers the principles of network engineering, including network design, configuration, and troubleshooting.
+ITN 277,Network Infrastructure Security,This course covers the principles of securing network infrastructure, including routers, switches, and wireless access points.
+ITP 132,Python Programming,This course covers the fundamentals of programming with Python, including data types, control structures, functions, and file I/O.
+ITP 136,Web Programming with Python,This course covers the basics of web programming with Python, including HTML, CSS, and JavaScript.
+ITP 150,Database Fundamentals,This course covers the basics of database design and programming with SQL.
+ITP 220,Advanced Python Programming,This course covers advanced topics in Python programming, including object-oriented programming, regular expressions, and multiprocessing.
