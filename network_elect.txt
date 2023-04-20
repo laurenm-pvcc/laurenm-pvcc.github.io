@@ -1,0 +1,20 @@
+Course Name,Course Number,Description
+Computer Science 1,CSC 201,Introduction to programming using Python
+Computer Science 2,CSC 202,Continued study of programming using Python
+Computer Science 3,CSC 205,Introduction to computer systems and assembly language
+Digital Electronics,ETR 113,Introduction to digital logic circuits and devices
+Computer Networks 1,ITN 106,Introduction to network technologies
+Operating Systems 1,ITN 120,Introduction to operating systems
+Routing and Switching Essentials,ITN 151,Introduction to the architecture, components, and operations of routers and switches
+Linux/Unix Single User,ITN 170,Introduction to Linux/Unix for single user
+Network Administration and Maintenance,ITN 260,Advanced network administration and maintenance
+Network Communications,ITN 290,Introduction to communication and management within networks
+Python Programming 2,ITP 120,Introduction to advanced programming concepts using Python
+Network Infrastructure Basics,ITP 132,Introduction to network infrastructure
+Server-side Web Development,ITP 200,Introduction to server-side web development using PHP
+Network Services,ITP 220,Introduction to network services
+Web Development 3,ITP 290,Introduction to advanced web development
+Pre-Calculus I,MTH 131,Introduction to functions and their graphs
+Calculus I,MTH 161,Introduction to limits, derivatives, and integrals
+Calculus II,MTH 162,Introduction to techniques and applications of integration
+Discrete Mathematics,MTH 263,Introduction to discrete mathematics
