@@ -28,14 +28,31 @@ info_elect ={'ITN 170', 'ITN 208', 'ITN 260', 'ITN 261',
 dash_line = "------------------------------------------------------"
 
 def main():
-    print("\n**************Piedmont Virgina Community College********************")
-    process_network_courses()
-    display_network_courses()
-
-    process_info_courses()
-    display_info_courses()
-
-    process_courses_in_both()
+    global output_file
+    # Open the file for writing
+    with open(output_file, 'w') as f:
+        f.write("**************Piedmont Virginia Community College********************\n")
+        
+        process_network_courses(f)
+        f.write("\nREQUIRED COURSES FOR CSC CERTIFICATE IN COMPUTER & NETWORK SUPPORT TECHNOLOGIES:\n")
+        f.write(dash_line + "\n")
+        f.write("Number of Required Courses: {}\n".format(num_net_req))
+        f.write("Total Credit Hours: {}\n".format(tot_net))
+        f.write("All Required Courses:\n")
+        f.write("----------------------\n")
+        f.write('\n'.join(all_net_courses))
+        
+        f.write("\nTECHNICAL ELECTIVE COURSES FOR CSC CERTIFICATE IN COMPUTER & NETWORK SUPPORT TECHNOLOGIES:\n")
+        f.write(dash_line + "\n")
+        f.write("Number of Technical Elective Courses: {}\n".format(num_net_elect))
+        f.write("Total Credit Hours: {}\n".format(tot_net_elect))
+        f.write("All Technical Elective Courses:\n")
+        f.write("----------------------\n")
+        f.write('\n'.join(network_elect))
+        
+        process_info_courses(f)
+        f.write("\nREQUIRED COURSES FOR AAS DEGREE IN INFORMATION TECHNOLOGY:\n")
+        f.write(dash_line + "\
 
 def process_network_courses():
     global network_elect  # this set must be global since it is CHANGED in this function
