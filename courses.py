@@ -28,8 +28,23 @@ info_elect ={'ITN 170', 'ITN 208', 'ITN 260', 'ITN 261',
 dash_line = "------------------------------------------------------"
 
 def main():
-    filename = input("Enter filename")
-    with open("filename", "r") as f:
+    filename = input("Enter filename: ")
+    if not filename.endswith(".txt"):
+        filename += ".txt"
+    try:
+        with open(filename, "r") as f:
+            courses = json.load(f)
+    except FileNotFoundError:
+        print("File not found")
+        courses()
+
+    with open(filename, "w") as f:
+        content = f.read()
+        if not content:
+            f.write("CourseID,CourseName,InstructorName\n")
+        display_network_courses(f)
+        with open(filename, "r") as f:
+            display_info_courses(f)
         f.write("********************Piedmont Virginia Community College********************")
         process_network_courses()
         display_network_courses(f)
@@ -68,21 +83,23 @@ def display_network_courses(file):
     with open("network_courses.txt", "w") as f:
         f.write("CERTIFICATE: Computer & Network Support Technology\n")
         f.write(dash_line + "\n")
-        f.write("Number of required courses    : " + str(num_net_req) + "\n")
-        f.write("Number of elective courses    : " + str(num_net_elect) + "\n")
-        f.write("Total number of Cert. courses : " + str(tot_net) + "\n")
-        f.write(dash_line + "\n")
-        f.write("All Certificate courses: \n")
-        num = 1
-        for course in all_net_courses:
-            f.write(course + " ")
-            num += 1
-            if num % 5 == 0:
-                f.write(course + "\n")
-        f.write("\nNOTES:\n")
-        f.write("  *Asterisk indicates ELECTIVE course\n")
-        f.write("  Student choose 3 technical elective course\n")
-        f.write(dash_line + "\n")
+# Count number of required courses in the network category
+    num_net_req = sum(course['Category'] == 'Network' and course['Required'] for course in courses)
+    f.write("Number of required courses    : " + str(num_net_req) + "\n")
+    f.write("Number of elective courses    : " + str(num_net_elect) + "\n")
+    f.write("Total number of Cert. courses : " + str(tot_net) + "\n")
+    f.write(dash_line + "\n")
+    f.write("All Certificate courses: \n")
+    num = 1
+    for course in all_net_courses:
+        f.write(course + " ")
+        num += 1
+        if num % 5 == 0:
+            f.write(course + "\n")
+    f.write("\nNOTES:\n")
+    f.write("  *Asterisk indicates ELECTIVE course\n")
+    f.write("  Student choose 3 technical elective course\n")
+    f.write(dash_line + "\n")
 
 
 def process_info_courses():
