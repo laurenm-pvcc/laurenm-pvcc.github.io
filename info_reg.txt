@@ -1,0 +1,15 @@
+Course Name,Course Number,Description,Prerequisites
+Introduction to Computer Science,CSC 110,This course provides an introduction to the fundamental concepts of computer science.,None
+College Composition I,ENG 111,This course focuses on the development of writing skills through the study and application of rhetorical principles.,None
+College Composition II,ENG 112,This course builds on the skills developed in College Composition I to further develop critical thinking and writing abilities.,ENG 111
+Digital Logic Design,ETR 149,This course covers the design of digital circuits using Boolean algebra, logic gates, and other digital components.,None
+Computer Architecture and Organization,ETR 164,This course covers the design and organization of computer systems at the hardware level.,CSC 110
+Web Design I,ITD 110,This course covers the basics of web design using HTML, CSS, and other web development tools.,None
+Introduction to Database Systems,ITD 132,This course covers the principles and techniques of database design and implementation.,CSC 110 or ITN 106
+Programming Fundamentals I,ITE 182,This course provides an introduction to programming concepts and techniques using a high-level language such as Python.,None
+Advanced Java Programming,ITE 215,This course covers advanced programming techniques using the Java programming language.,ITE 182 or ITD 132
+Introduction to Networking,ITN 101,This course covers the fundamentals of computer networking, including network protocols, architectures, and technologies.,None
+Network Communication,ITN 106,This course covers the installation, configuration, and management of network operating systems.,ITN 101
+Routing and Switching Essentials,ITN 111,This course covers the concepts and principles of routing and switching in computer networks.,ITN 106
+Introduction to Python,ITP 120,This course provides an introduction to the Python programming language and its applications.,None
+College Algebra,MTH 131,This course covers the fundamental concepts of algebra and their applications in problem-solving.,Math placement score of 4 or higher on the Virginia Placement Test or completion of MTE 1-3. 
