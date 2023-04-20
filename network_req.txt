@@ -1,0 +1,4 @@
+Course Name, Course Number, Prerequisites
+Intro to Computer Science, CSC 110, None
+Routing and Switching Essentials, ITN 101, CSC 110 or ETR 164
+PC Hardware and Software Support, ETR 164, None
