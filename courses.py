@@ -92,9 +92,9 @@ def process_info_courses():
 def display_info_courses(f):
     f.write("\n\nCourse Information:\n\n")
     for course in courses:
-        f.write(f"Course Name: {course['name']}\n")
+        f.write(f"Course Name  : {course['name']}\n")
         f.write(f"Course Number: {course['number']}\n")
-        f.write(f"Description: {course['description']}\n")
+        f.write(f"Description  : {course['description']}\n")
         f.write("\n")
     #student: add code for printin info course here
     print("now here")
