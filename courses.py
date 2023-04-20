@@ -28,89 +28,87 @@ info_elect ={'ITN 170', 'ITN 208', 'ITN 260', 'ITN 261',
 dash_line = "------------------------------------------------------"
 
 def main():
-    global output_file
-    # Open the file for writing
-    with open(output_file, 'w') as f:
-        f.write("**************Piedmont Virginia Community College********************\n")
-        
-        process_network_courses(f)
-        f.write("\nREQUIRED COURSES FOR CSC CERTIFICATE IN COMPUTER & NETWORK SUPPORT TECHNOLOGIES:\n")
-        f.write(dash_line + "\n")
-        f.write("Number of Required Courses: {}\n".format(num_net_req))
-        f.write("Total Credit Hours: {}\n".format(tot_net))
-        f.write("All Required Courses:\n")
-        f.write("----------------------\n")
-        f.write('\n'.join(all_net_courses))
-        
-        f.write("\nTECHNICAL ELECTIVE COURSES FOR CSC CERTIFICATE IN COMPUTER & NETWORK SUPPORT TECHNOLOGIES:\n")
-        f.write(dash_line + "\n")
-        f.write("Number of Technical Elective Courses: {}\n".format(num_net_elect))
-        f.write("Total Credit Hours: {}\n".format(tot_net_elect))
-        f.write("All Technical Elective Courses:\n")
-        f.write("----------------------\n")
-        f.write('\n'.join(network_elect))
-        
-        process_info_courses(f)
-        f.write("\nREQUIRED COURSES FOR AAS DEGREE IN INFORMATION TECHNOLOGY:\n")
-        f.write(dash_line + "\
+    filename = input("Enter filename")
+    with open("filename", "r") as f:
+        f.write("********************Piedmont Virginia Community College********************")
+        process_network_courses()
+        display_network_courses(f)
+        f.seek(0)  # reset the file pointer
+        courses = load_courses(f)
+        display_info_courses(courses)
+
+        process_info_courses()
+        display_info_courses(f)
+
+        process_courses_in_both()
+        display_courses_in_both(f)
+
+    print("The course data has been written to the file 'pvcc_courses.txt'.")
+
 
 def process_network_courses():
-    global network_elect  # this set must be global since it is CHANGED in this function
+    global network_elect #this set must be global since it is CHANGED in this function
     global num_net_req, num_net_elect, tot_net, all_net_courses
-    temp_set = set()  # create a new empty set
+    temp_set = set() #then add the new course to the temporary set
 
     for course in network_elect:
-        asterisk_course = "*" + course  # insert an asterisk in front of ELECTIVE course name
-        temp_set.add(asterisk_course)  # then add the new course name to the temporary set
+        asterisk_course = "*" + course #insert an asterisk in front of ELECTIVE course name
+        temp_set.add(asterisk_course) # then add the new course name to a temporary set
 
-    network_elect.clear()  # remove all courses from set of elective courses
-    network_elect = temp_set.copy()  # COPY all the courses from the temporary set back into the elective set
+    network_elect.clear() #remove all courses from set of elective courses
+    network_elect = temp_set.copy() #COPY all the courses from the temporary set back into the elective set
 
     num_net_req = len(network_req)
     num_net_elect = len(network_elect)
     tot_net = num_net_req + num_net_elect
-    all_net_courses = network_req.union(network_elect)  # UNION: create a new set with ALL network courses
+    all_net_courses = network_req.union(network_elect) #UNION: create a new set with ALL network courses
 
-
-def display_network_courses():
-    print("\nCERTIFICATE: Computer & Network Support Technology")
-    print(dash_line)  # format the variable using an f-string
-    print("Number of required courses    : " + str(num_net_req))
-    print("Number of elective courses    : " + str(num_net_elect))
-    print("Total number of Cert. courses : " + str(tot_net))
-    print(dash_line)  # format the variable using an f-string
-    print("All Certificate courses: ")
-    num = 1
-    for course in all_net_courses:  # Display 5 courses per line
-        print(course, end=" ")
-        num += 1
-        if num % 5 == 0:
-            print()
-    print("\nNOTES:")
-    print("  *Asterisk indicates ELECTIVE course")
-    print("  Student choose 3 technical elective course")
-    print(dash_line)  # format the variable using an f-string
+def display_network_courses(file):
+    file.write("Courses offered by the Network department:\n")
+    with open("network_courses.txt", "w") as f:
+        f.write("CERTIFICATE: Computer & Network Support Technology\n")
+        f.write(dash_line + "\n")
+        f.write("Number of required courses    : " + str(num_net_req) + "\n")
+        f.write("Number of elective courses    : " + str(num_net_elect) + "\n")
+        f.write("Total number of Cert. courses : " + str(tot_net) + "\n")
+        f.write(dash_line + "\n")
+        f.write("All Certificate courses: \n")
+        num = 1
+        for course in all_net_courses:
+            f.write(course + " ")
+            num += 1
+            if num % 5 == 0:
+                f.write(course + "\n")
+        f.write("\nNOTES:\n")
+        f.write("  *Asterisk indicates ELECTIVE course\n")
+        f.write("  Student choose 3 technical elective course\n")
+        f.write(dash_line + "\n")
 
 
 def process_info_courses():
     #student: add code for processing info course here
     print("here")
 
-def display_info_courses():
+def display_info_courses(f):
+    f.write("\n\nCourse Information:\n\n")
+    for course in courses:
+        f.write(f"Course Name: {course['name']}\n")
+        f.write(f"Course Number: {course['number']}\n")
+        f.write(f"Description: {course['description']}\n")
+        f.write("\n")
     #student: add code for printin info course here
-    print("no here")
+    print("now here")
 
 def process_courses_in_both():
-    both_req = network_req.intersection(info_req)  # fix variable name
+    both_req = network_req.intersection(info_reg)
     print(dash_line)
     print("REQUIRED courses in both programs:")
     num = 1
-    for course in both_req:  # Display 5 courses per line
-        print(course, end=" ")
+    for course in both_req:  #Display 5 courses per line
+        print(course, end = " ")
         num += 1
         if num % 5 == 0:
             print()
-    # student: add code for elective in both courses here
-
+    #student: add code for elective in both courses here
 
 main()
