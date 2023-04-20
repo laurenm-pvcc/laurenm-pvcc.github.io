@@ -1,0 +1,2 @@
+CNET-101,Computer Networks,Network,3,False
+CNET-201,Advanced Computer Networks,Network,3,True
