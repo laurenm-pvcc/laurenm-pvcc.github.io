@@ -5,7 +5,7 @@
 
 dogs = ["Sadie", "Molly", "Ella", "Milo", "Buddy", "Rocky", "AnnaBelle", "Gonzo", "Sweetie-Pie", "Diego",]
 
-dogs2 = []
+dogs2 = ["Maybe",]
 
 def main():
     how_many = len(dogs)
