@@ -3,7 +3,7 @@
 # finding number of items in the list, sorting the list, adding/removing items,
 # copying a list of items into another list, and changing the data in the list.
 
-dogs = ["Sadie", "Molly", "Ella", "Milo", "Buddy", "Rocky", "AnnaBelle", "Gonzo", "Sweetie-Pie", "Diego", "Maybe", "Patty",]
+dogs = ["Sadie", "Molly", "Ella", "Milo", "Buddy", "Rocky", "AnnaBelle", "Gonzo", "Sweetie-Pie", "Diego", "Patty",]
 
 dogs2 = ["Maybe",]
 
@@ -55,4 +55,5 @@ def main():
     print(dogs)
 
 main()
+
 
