@@ -1,87 +1,903 @@
 <!DOCTYPE html>
-<html lang= "en">
-    <!-- Name: Lauren Magura -->
-    <!-- Program Purpose: This is my PVCC index file.  It will have links to all my HTML and PYTHON programs.-->
-    <head>
-        <title>Lauren M.</title>
-        <style>
-            body {background-image:url('https://github.com/laurenm-pvcc/laurenm-pvcc.github.io/blob/main/wp-index.png?raw=true'); font-family:calibri,helvetica,sans-serif;margin-top: 0px;}
-            h1 {color:#b2fbfb;font-size: 1.5em;margin-left: 1em;}
-            h2 {color:#b2fbfb;font-size: 1.05em;margin-left: 2em;}
-            h3{font-size: .95em;margin-left: 2em;}
-            ul{margin-left: 2.5em;}
-            table{width:800px;font-size: 1.3em;font-weight: bold;background-color: #333333;margin:auto;border: 4px double #fbb2b2;opacity: 0.93;font-family: calibri, sans-serif;border-radius: 20px;overflow: hidden;}
-            
-            a{text-decoration: none;}
-            a:link{color:#b2fbfb;}
-            a:visited{color:#cbcbcb} 
-            a:hover{color:#fbb2b2;} 
-            a:active{color:#000000;} 
-        </style>
-    </head>
-    <body>
-    
-        <table>
-            <tr style="background-color:#484748;text-align: center;">
-                <td><a href="index.html">Home</a></td>
-                <td><a href="https://www.pvcc.edu">PVCC</a></td>
-                <td><a href="https://www.w3schools.com/html/">W3 Schools</a></td>
-                <td><a href="https://forms.gle/ztNR9M62e2MNxEVLA">Contact Us</a></td>
-                
-            </tr>
-            <tr><td colspan="4">
-                <h1>Lauren M</h1>
-                <h2>CSC 110 Web Pages</h2>
-                <h3>
-                    <ul>
-                        <li><a href="helloworld.html">Hello World</a></li>
-                        <li><a href="bagels.html">Bagels</a></li>
-                        <li><a href="planets.html">Planets</a></li>
-                        <li><a href="githubinfo.html">GitHub Info</a></li>
-                        <li><a href="home.html">SCOTUS: McCulloch v. Maryland</a></li>
-                        
-                        
-                    </ul>
-                </h3>
-                <h2>Chapter Terms</h2>
-                <h3>
-                    <ul>
-                        <li><a href="opsys.html">Chapter 3</a></li>
-                        <li><a href="network.html">Chapter 4</li>
-                        <li><a href="programming.html">Chapter 5</li> 
-                        <li><a href="proglang.html">Chapter 6</li>
-                        <li><a href="software-eng.html">Chapter 7: Software Engineering</li>
-                    </ul>
-                </h3>
-                <h2>PYTHON</h2>
-                <h3>
-                        <ul>
-                            <li><a href="tempconvert.py">Temperature Converter</li>
-                            <li><a href="tickets.py">Movie Tickets</li>
-                            <li><a href="tuition.py">Tuition</li>
-                            <li><a href="pizza.py">Palermo Pizza</li>
-                            <li><a href="magic8.py">Magic 8-ball</li>
-                            <li><a href="freshfoods.py">Fresh Foods</li>
-                            <li><a href="dogs.py">Dog Names</li>
-                            <li><a href="grades.py">Grades</li>
-                            <li><a href="courses.py">PVCC Courses</li>
-                            <li><a href="grades_files">Dictionary--Grades Version 3: Input and Output Files</li>
+<html lang="en">
 
-                        </ul>
-                    </h3>
-                <h2>Pictures</h2>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Lauren Magura - Information Systems Technology, programming, web development, and accessibility.">
+
+    <title>Lauren Magura | Information Systems Technology</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- SKIP LINK
+         Allows keyboard and screen-reader users to bypass repeated navigation. -->
+
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+
+    <!-- HEADER / NAVIGATION -->
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a href="index.html" class="site-name">
+                LAUREN MAGURA
+            </a>
+
+
+            <nav class="main-nav" aria-label="Main navigation">
+
+                <a href="#about">About</a>
+
+                <a href="#work">Work</a>
+
+                <a href="#skills">Skills</a>
+
+                <a href="#education">Education</a>
+
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main id="main-content">
+
+
+        <!-- HERO -->
+
+        <section class="hero" aria-labelledby="hero-heading">
+
+
+            <div class="hero-image">
+
+                <img
+                    src="images/Dark_Library_Room.png"
+                    alt="Dark Gothic library with tall bookshelves, balconies, and a reading table"
+                >
+
+            </div>
+
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    INFORMATION SYSTEMS • PROGRAMMING • ACCESSIBILITY
+                </p>
+
+
+                <h1 id="hero-heading">
+
+                    A collection of
+                    <br>
+
+                    work, study &amp;
+                    <br>
+
+                    <em>curiosity.</em>
+
+                </h1>
+
+
+                <p class="intro">
+
+                    I am Lauren Magura, currently pursuing my AAS in Information Systems Technology specializing in Programming, along with related certificates. I am especially interested in the intersection of technology, accessibility, and problem-solving. Through my coursework, independent projects, and Trusted Tester training through the U.S. Department of Homeland Security, I have been developing both my technical skills and my understanding of accessible technology.
+
+
+
+                </p>
+
+
+                <a href="#work" class="text-link">
+
+                    Explore my work
+                    <span aria-hidden="true">→</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section
+            id="about"
+            class="section about-section"
+            aria-labelledby="about-heading"
+        >
+
+
+            <div class="section-number" aria-hidden="true">
+
+                01
+
+            </div>
+
+
+            <div class="section-content">
+
+
+                <div class="about-layout">
+
+
+                    <div class="about-image">
+
+                        <img
+                            src="images/Dark_Library_OpenBook.png"
+                            alt="Open book, fountain pen, glasses, and books on a dark desk"
+                        >
+
+                    </div>
+
+
+                    <div class="about-text">
+
+                        <p class="eyebrow">
+                            ABOUT
+                        </p>
+
+
+                        <h2 id="about-heading">
+
+                            Learning to build things
+                            <em>well.</em>
+
+                        </h2>
+
+
+                        <p>
+
+                            My work began with HTML and web development and has
+                            expanded into Python and Java. I am currently learning
+                            C++ and continuing to develop my understanding of
+                            programming and computer science.
+
+                        </p>
+
+
+                        <p>
+
+                            I am interested in technology, accessibility,
+                            problem-solving, and the ways digital tools can
+                            make information and experiences easier to use.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!--  SELECTED WORK -->
+
+        <section
+            id="work"
+            class="section work-section"
+            aria-labelledby="work-heading"
+        >
+
+
+            <div class="section-number" aria-hidden="true">
+
+                02
+
+            </div>
+
+
+            <div class="section-content">
+
+
+                <p class="eyebrow">
+                    SELECTED WORK
+                </p>
+
+
+                <h2 id="work-heading">
+
+                    An ongoing
+                    <em>archive.</em>
+
+                </h2>
+
+
+
+                <!--  HTML / WEB DEVELOPMENT -->
+
+                <article class="work-card">
+
+
+                    <div class="work-image">
+
+                        <img
+                            src="images/Dark_Library_Books.png"
+                            alt="Antique dark green books with gold lettering and a globe"
+                        >
+
+                    </div>
+
+
+                    <div class="work-info">
+
+
+                        <p class="category">
+                            HTML • WEB DEVELOPMENT
+                        </p>
+
+
+                        <h3>
+                            Web Pages
+                        </h3>
+
+
+                        <p>
+
+                            A collection of HTML projects created while
+                            studying at Piedmont Virginia Community College.
+
+                        </p>
+
+
+                        <div class="project-links">
+
+
+                            <a href="helloworld.html">
+                                Hello World
+                            </a>
+
+
+                            <a href="bagels.html">
+                                Bagels
+                            </a>
+
+
+                            <a href="planets.html">
+                                Planets
+                            </a>
+
+
+                            <a href="githubinfo.html">
+                                GitHub Info
+                            </a>
+
+
+                            <a href="home.html">
+                                McCulloch v. Maryland
+                            </a>
+
+
+                            <a href="index2.html">
+                                Zombish 101
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PYTHON -->
+
+                <article class="work-card python-card">
+
+
+                    <div class="work-info">
+
+
+                        <p class="category">
+                            PYTHON
+                        </p>
+
+
+                        <h3>
+                            Programming Projects
+                        </h3>
+
+
+                        <p>
+
+                            Python exercises and applications covering
+                            calculations, input and output, dictionaries,
+                            files, and programming logic.
+
+                        </p>
+
+
+                        <div class="project-links">
+
+
+                            <a href="tempconvert.py">
+                                Temperature Converter
+                            </a>
+
+
+                            <a href="tickets.py">
+                                Movie Tickets
+                            </a>
+
+
+                            <a href="tuition.py">
+                                Tuition
+                            </a>
+
+
+                            <a href="pizza.py">
+                                Palermo Pizza
+                            </a>
+
+
+                            <a href="magic8.py">
+                                Magic 8-Ball
+                            </a>
+
+
+                            <a href="freshfoods.py">
+                                Fresh Foods
+                            </a>
+
+
+                            <a href="dogs.py">
+                                Dog Names
+                            </a>
+
+
+                            <a href="grades.py">
+                                Grades
+                            </a>
+
+
+                            <a href="courses.py">
+                                PVCC Courses
+                            </a>
+
+
+                            <a href="grades_files.py">
+                                Grades - Files
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!--  COMPUTER SCIENCE COURSEWORK -->
+
+                <article class="academic-card">
+
+
+                    <p class="category">
+                        COMPUTER SCIENCE
+                    </p>
+
+
                     <h3>
-                    <ul>
-                    <li><a href="Lake Anna's Carpenter, LLC ©.png">Fishing ©</a></li>
-                    </ul>
+                        Chapter Terms
                     </h3>
-                <h2>ITD 110 Web Pages</h2>
-                <h3>
-                    <ul>
-                        <li><a href="index2.html">Zombish 101</li>
-                    </ul>
-                </h3>
-            </td></tr>
-            </table>
-    </body>
+
+
+                    <div class="chapter-grid">
+
+
+                        <a href="opsys.html">
+
+                            <span aria-hidden="true">03</span>
+
+                            <strong>
+                                Operating Systems
+                            </strong>
+
+                        </a>
+
+
+                        <a href="network.html">
+
+                            <span aria-hidden="true">04</span>
+
+                            <strong>
+                                Networks
+                            </strong>
+
+                        </a>
+
+
+                        <a href="programming.html">
+
+                            <span aria-hidden="true">05</span>
+
+                            <strong>
+                                Programming
+                            </strong>
+
+                        </a>
+
+
+                        <a href="proglang.html">
+
+                            <span aria-hidden="true">06</span>
+
+                            <strong>
+                                Programming Languages
+                            </strong>
+
+                        </a>
+
+
+                        <a href="software-eng.html">
+
+                            <span aria-hidden="true">07</span>
+
+                            <strong>
+                                Software Engineering
+                            </strong>
+
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SKILLS -->
+
+        <section
+            id="skills"
+            class="section skills-section"
+            aria-labelledby="skills-heading"
+        >
+
+
+            <div class="section-number" aria-hidden="true">
+
+                03
+
+            </div>
+
+
+            <div class="section-content">
+
+
+                <p class="eyebrow">
+                    LANGUAGES &amp; TECHNOLOGIES
+                </p>
+
+
+                <h2 id="skills-heading">
+
+                    From markup to
+                    <em>machines.</em>
+
+                </h2>
+
+
+                <div class="skills-list">
+
+
+                    <div class="skill">
+
+                        <span aria-hidden="true">01</span>
+
+                        <strong>HTML</strong>
+
+                        <small>
+                            Web Development
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span aria-hidden="true">02</span>
+
+                        <strong>Java</strong>
+
+                        <small>
+                            Programming
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <span aria-hidden="true">03</span>
+
+                        <strong>Python</strong>
+
+                        <small>
+                            Programming
+                        </small>
+
+                    </div>
+
+
+                    <div class="skill current">
+
+                        <span aria-hidden="true">04</span>
+
+                        <strong>C++</strong>
+
+                        <small>
+                            Currently Learning
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EDUCATION -->
+
+        <section
+            id="education"
+            class="section education-section"
+            aria-labelledby="education-heading"
+        >
+
+
+            <div class="section-number" aria-hidden="true">
+
+                04
+
+            </div>
+
+
+            <div class="section-content">
+
+
+                <div class="education-layout">
+
+
+                    <div class="education-text">
+
+
+                        <p class="eyebrow">
+                            ACADEMIC RECORD
+                        </p>
+
+
+                        <h2 id="education-heading">
+
+                            Study, practice,
+                            <em>progress.</em>
+
+                        </h2>
+
+
+                        <p class="section-intro">
+
+                            My studies focus on information systems,
+                            programming, and the foundations of computer science.
+
+                        </p>
+
+
+
+                        <!-- DEGREE -->
+
+                        <div class="academic-program">
+
+
+                            <p class="program-label">
+                                ASSOCIATE DEGREE
+                            </p>
+
+
+                            <h3>
+
+                                AAS Information Systems Technology
+
+                            </h3>
+
+
+                            <p class="program-specialization">
+
+                                Programming Specialization
+
+                            </p>
+
+
+                            <p class="institution">
+
+                                Piedmont Virginia Community College
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- CERTIFICATES -->
+
+                        <div class="certificates">
+
+
+                            <p class="program-label">
+                                CERTIFICATES
+                            </p>
+
+
+                            <div class="certificate">
+
+
+                                <span aria-hidden="true">
+                                    01
+                                </span>
+
+
+                                <div>
+
+                                    <h3>
+                                        CSC Fundamentals of Programming
+                                    </h3>
+
+                                    <p>
+                                        Certificate
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="certificate">
+
+
+                                <span aria-hidden="true">
+                                    02
+                                </span>
+
+
+                                <div>
+
+                                    <h3>
+                                        CSC Programming Concepts
+                                    </h3>
+
+                                    <p>
+                                        Certificate
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Decorative image.
+                         Empty alt because the image is decorative
+                         and its information is already represented by the surrounding text. -->
+
+                    <div class="education-image" aria-hidden="true">
+
+                        <img
+                            src="images/Dark_Library_Leaves.png"
+                            alt=""
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OTHER WORK -->
+
+        <section
+            class="section other-section"
+            aria-labelledby="other-heading">
+
+
+            <div class="section-number" aria-hidden="true">
+
+                05
+
+            </div>
+
+
+            <div class="section-content">
+
+
+                <p class="eyebrow">
+                    OTHER WORK
+                </p>
+
+
+                <h2 id="other-heading">
+
+                    Beyond the
+                    <em>code.</em>
+
+                </h2>
+
+
+                <div class="simple-links">
+
+
+                    <a href="images/Lake Anna's Carpenter, LLC ©.png">
+
+                        <span aria-hidden="true">
+                            01
+                        </span>
+
+                        <strong>
+                            Fishing Photography
+                        </strong>
+
+                    </a>
+
+
+                    <a href="githubinfo.html">
+
+                        <span aria-hidden="true">
+                            02
+                        </span>
+
+                        <strong>
+                            GitHub Information
+                        </strong>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONTACT -->
+
+        <section
+            id="contact"
+            class="contact-section"
+            aria-labelledby="contact-heading"
+        >
+
+
+            <p class="eyebrow">
+                CORRESPONDENCE
+            </p>
+
+
+            <h2 id="contact-heading">
+
+                Have something
+                <br>
+
+                <em>to say?</em>
+
+            </h2>
+
+
+            <a
+                href="https://forms.gle/ztNR9M62e2MNxEVLA"
+                class="contact-button"
+                target="_blank"
+                rel="noopener"
+            >
+
+                Contact Me
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+
+        <div class="footer-name">
+
+            <strong>
+                LAUREN MAGURA
+            </strong>
+
+            <span>
+                Information Systems Technology
+            </span>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/laurenm-pvcc"
+                target="_blank"
+                rel="noopener"
+            >
+                GitHub
+            </a>
+
+
+            <a
+                href="https://www.pvcc.edu"
+                target="_blank"
+                rel="noopener"
+            >
+                PVCC
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Lauren Magura
+        </p>
+
+
+    </footer>
+
+
+</body>
+
 </html>
